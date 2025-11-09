@@ -24,6 +24,7 @@ function NewPlantForm({ onAddPlant }) {
       name: formData.name,
       image: formData.image,
       price: parseFloat(formData.price),
+      inStock: true,
     };
 
     // POST to the server

@@ -17,10 +17,31 @@ function App() {
     setData([...data, newPlant]);
   }
 
+  function handleToggleStock(plantId, newStock) {
+    fetch(`http://localhost:6001/plants/${plantId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ inStock: newStock }),
+    })
+      .then((res) => res.json())
+      .then((updatedPlant) => {
+        // Update local state
+        setData(
+          data.map((plant) =>
+            plant.id === updatedPlant.id ? updatedPlant : plant
+          )
+        );
+      });
+  }
+
   return (
     <div className="app">
       <Header />
-      <PlantPage plants={data} onAddPlant={handleAddPlant} />
+      <PlantPage
+        plants={data}
+        onAddPlant={handleAddPlant}
+        onToggleStock={handleToggleStock}
+      />
     </div>
   );
 }

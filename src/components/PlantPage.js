@@ -5,7 +5,7 @@ import Search from "./Search";
 import { useState } from "react";
 
 //using plants as a prop in this page
-function PlantPage({ plants, onAddPlant }) {
+function PlantPage({ plants, onAddPlant, onToggleStock }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   // Filtering plants
@@ -16,7 +16,7 @@ function PlantPage({ plants, onAddPlant }) {
     <main>
       <NewPlantForm onAddPlant={onAddPlant} />
       <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-      <PlantList plants={filteredPlants} />
+      <PlantList plants={filteredPlants} onToggleStock={onToggleStock} />
     </main>
   );
 }
