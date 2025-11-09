@@ -23,17 +23,16 @@ function NewPlantForm({ onAddPlant }) {
     const newPlant = {
       name: formData.name,
       image: formData.image,
-      price: parseFloat(formData.price),
-      inStock: true,
+      price: formData.price,
     };
 
     // POST to the server
     fetch("http://localhost:6001/plants", {
       method: "POST",
-      body: JSON.stringify(newPlant),
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "Application/JSON",
       },
+      body: JSON.stringify(newPlant),
     })
       .then((res) => res.json())
       .then((data) => {

@@ -12,7 +12,7 @@
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
       "price": 25.98,
-      "inStock": false
+      "inStock": true
     },
     {
       "id": 3,
@@ -67,14 +67,14 @@
       "name": "Mangrove",
       "image": "https://images.unsplash.com/photo-1651807428952-5f0637a7b3c2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbmdyb3ZlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
       "price": 198.96,
-      "inStock": false,
+      "inStock": true,
       "id": 10
     },
     {
       "name": "Water Lilly",
       "image": "https://images.unsplash.com/photo-1469259943454-aa100abba749?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400",
       "price": 44.99,
-      "inStock": true,
+      "inStock": false,
       "id": 11
     }
   ]
