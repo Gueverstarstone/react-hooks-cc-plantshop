@@ -4,12 +4,12 @@ import PlantList from "./PlantList";
 import Search from "./Search";
 
 //using plants as a prop in this page
-function PlantPage({plants}) {
+function PlantPage({ plants, onAddPlant }) {
   return (
     <main>
-      <NewPlantForm />
+      <NewPlantForm onAddPlant={onAddPlant} />
       <Search />
-      <PlantList plants = {plants} />
+      <PlantList plants={plants} />
     </main>
   );
 }
