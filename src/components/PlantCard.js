@@ -18,7 +18,7 @@ function PlantCard({ plant, onToggleStock }) {
         </button>
       ) : (
         <button onClick={() => onToggleStock(plant.id, true)}>
-          Out of Stock
+          Sold out
         </button>
       )}
     </li>
